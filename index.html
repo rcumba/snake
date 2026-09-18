@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake</title><link rel="stylesheet" href="style.css"><script src="game.js" defer></script>
+</head>
+<body><main>
+<section id="menu" class="menu">
+<p class="eyebrow">INTO THE UNDERGROWTH</p><h1>Snake<span>.</span></h1><p class="intro">Eat &middot; Grow &middot; Survive</p>
+<button id="play" class="primary">PLAY</button><button id="how">How to Play</button>
+<section id="instructions" hidden aria-labelledby="help-title"><h2 id="help-title">How to Play</h2>
+<p>Steer with <b>arrow keys</b>, <b>WASD</b>, or the direction buttons. You cannot reverse into yourself.</p>
+<p>Eat apples for <b>10 points</b> each. Your snake grows and gradually speeds up. Avoid the walls and your own body.</p>
+<p>Every 5 normal apples gives a 40% chance of a glowing <b>Giant Apple</b>: +30 points and 3 growth segments. Eat any part of it within 10 seconds of active play. Normal apples remain available.</p><p>Press <b>Space / P</b> to pause or resume. Restart begins a new game. Leaving the window pauses play.</p><button id="close-help">Back</button></section>
+</section>
+<section id="session" hidden aria-label="Snake game">
+<header class="hud"><div class="scores"><div>SCORE <strong id="score">0</strong></div><div>BEST <strong id="best">0</strong></div></div><span id="bonus-status" hidden aria-live="off"></span><span id="status" role="status">Ready when you are</span><nav aria-label="Game controls"><button id="pause" disabled>Pause</button><button id="restart">Restart</button><button id="menu-button">Menu</button></nav></header>
+<div id="arena"><div class="board"><canvas id="board" width="600" height="600" aria-label="Snake game board. Use arrow keys or W A S D to steer."></canvas><div id="overlay" hidden><h2 id="title"></h2><p id="message"></p><button id="start" class="primary">Play again</button></div></div></div>
+<div class="directions" aria-label="Direction controls"><button data-direction="left" aria-label="Left">&#8592;</button><button data-direction="up" aria-label="Up">&#8593;</button><button data-direction="down" aria-label="Down">&#8595;</button><button data-direction="right" aria-label="Right">&#8594;</button></div>
+</section></main></body></html>
